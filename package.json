@@ -20,6 +20,7 @@
         "@sveltejs/vite-plugin-svelte": "^6.2.1",
         "@types/marked": "^5.0.2",
         "svelte": "^5.45.6",
+        "svelte-adapter-azure-swa": "^0.22.1",
         "svelte-check": "^4.3.4",
         "typescript": "^5.9.3",
         "vite": "^7.2.6"

@@ -209,7 +209,7 @@
         padding: 0;
     }
 
-    header {
+    /* header {
         background: var(--bg-secondary);
         border-bottom: 1px solid var(--border);
         padding: 1.5rem 2rem;
@@ -259,7 +259,7 @@
         color: var(--text-secondary);
         text-transform: uppercase;
         letter-spacing: 0.5px;
-    }
+    } */
 
     .messages {
         flex: 1;
