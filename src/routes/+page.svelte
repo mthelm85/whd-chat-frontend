@@ -45,7 +45,7 @@
                     const lastChar = currentAssistantMessage.slice(-1);
                     const firstChar = event.content.charAt(0);
 
-                    // Add space after sentence-ending punctuation if next char isn't whitespace
+                    // Add space after sentence-ending punctuation if next char isn't whitespace or asterisk
                     const punctuationNeedsSpace = [
                         ".",
                         "!",
@@ -56,11 +56,13 @@
                     ].includes(lastChar);
                     const nextIsNotWhitespace =
                         firstChar && !/\s/.test(firstChar);
+                    const nextIsNotAsterisk = firstChar !== "*"; // Add this line
 
                     const needsSpace =
                         currentAssistantMessage.length > 0 &&
                         punctuationNeedsSpace &&
-                        nextIsNotWhitespace;
+                        nextIsNotWhitespace &&
+                        nextIsNotAsterisk; // Add this condition
 
                     currentAssistantMessage +=
                         (needsSpace ? " " : "") + event.content;
